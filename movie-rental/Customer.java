@@ -1,12 +1,15 @@
-// some of the naming conventions for this file are not good. For example, the name of the class is Customer
-
-// code smells in this file include:
-// - long method: the statement() method is long and complex. It needs to be refactored.
-// - switch statement: the switch statement in the statement() method is a code smell. It should be replaced with polymorphism to make the code more maintainable and extensible.
-// - magic numbers: the price codes (0, 1, 2) are magic numbers. They should be replaced with constants to make the code more readable and maintainable.
-// - duplicate code: the calculation of the amount for each rental is duplicated in the switch statement. This code should be extracted into a separate method to reduce duplication and improve maintainability.
-// - unclear variable names: some of the variable names are not clear. For example, "each" does not indicate what it is. It should be renamed to something more meaningful, such as "rental" or "currentRental" to improve readability and maintainability.
-// - lack of error handling: there is no error handling in the code. For example, if an invalid price code is passed to the Movie constructor, the code will not handle it gracefully. Error handling should be added to make the code more robust and prevent it from crashing in unexpected situations.           
+// to do: *put an 'X' next to the to-dos already accomplished*
+/*
+    - Change the Vector usage to ArrayList of just List (easier to understand)
+    - make a private global variable for frequentRenterPointer [set it to 0]
+    - re-do the Customer class using this.name = name
+    - re-do the addRental method using the new ArrayList
+    - create a method for updateFrequentRentalPoints()
+    - create a private method for calculateTotalAmount()
+    - make a separate method for footer code
+    - fix the statement method [shorten it]
+    - crease a method to configure the xmlStatement needed for output at main
+ */
 
 import java.util.Enumeration;
 import java.util.Vector;
