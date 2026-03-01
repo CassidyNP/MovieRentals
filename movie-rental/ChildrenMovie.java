@@ -1,5 +1,3 @@
-// to do:
-// check the math later on these methods
 
 public class ChildrenMovie extends Movie{
 
@@ -7,17 +5,16 @@ public class ChildrenMovie extends Movie{
         super(title);
     }
 
-    // check this math later
     @Override
     public double calculateAmount(int daysRented) {
-        double amount = 1.5;
+        double totalAmount = 1.5;
         if (daysRented > 3) {
-            amount += (daysRented - 3) * 1.5;
+            totalAmount += (daysRented - 3) * 1.5;
         }
-        return amount;
+        return totalAmount;
     }
 
-    // check this later
+    // Children's Movie only gets one renter point
     @Override
     public int calculateFrequentRenterPoints(int daysRented) {
         return 1;

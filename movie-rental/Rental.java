@@ -1,4 +1,7 @@
-
+/* Rental Class
+    - Major Changes:
+        - Added computeRentalPrice() and getFrequentRenterPoints()
+*/
 public class Rental {
     private Movie movie;
     private int   daysRented;

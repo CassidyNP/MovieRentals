@@ -1,3 +1,8 @@
+/* Movie Class
+    - Major Changes:
+        - made into an abstract class
+        - added calculateAmount() and calculateFrequentRenterPoints()
+*/
 public abstract class Movie {
 
     private String title;

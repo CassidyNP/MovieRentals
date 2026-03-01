@@ -1,3 +1,7 @@
+// Main class
+// Contains starter testing code
+// HW 2: Refactoring
+// Cassidy Pena
 
 public class Main {
 
@@ -12,7 +16,7 @@ public class Main {
         customer.addRental(new Rental(newRelease, 2));
         customer.addRental(new Rental(children, 1));
 
-        System.out.println(customer.statement());
+        System.out.println(customer.outputStatement());
         System.out.println("\nXML Statement:\n");
         System.out.println(customer.xmlStatement());
 

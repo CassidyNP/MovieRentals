@@ -4,17 +4,16 @@ public class RegularMovie extends Movie{
         super(title);
     }
 
-    // check this math later
     @Override
     public double calculateAmount(int daysRented) {
-        double amount = 2;
+        double totalAmount = 2;
         if (daysRented > 2) {
-            amount += (daysRented - 2) * 1.5;
+            totalAmount += (daysRented - 2) * 1.5;
         }
-        return amount;
+        return totalAmount;
     }
 
-    // check this later
+    // Regular movie also only gets 1 renter point
     @Override
     public int calculateFrequentRenterPoints(int daysRented) {
         return 1;
