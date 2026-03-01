@@ -1,6 +1,7 @@
 /* Customer class
     - Major Changes:
         - Seperated the original statement method into smaller purposeful methods
+        - Changes Vector to ArrayList data structure
         - Added the xml statement
         - Statement() --> outputStatement() with only one purpose
 */
@@ -33,18 +34,18 @@ public class Customer {
         }
     }
 
-    // iterate through rentals and add up total amount of movies rented
-    private double calculateTotalAmount(){
-        double totalAmount = 0;
+    // iterate through rentals and add up total price amount of movies rented
+    private double calculateTotalPrice(){
+        double totalPrice = 0;
         for(Rental rental : rentals){
-            totalAmount += rental.computeRentalPrice();
+            totalPrice += rental.computeRentalPrice();
         }
-        return totalAmount;
+        return totalPrice;
     }
 
-    private String getFooter(double totalAmount){
+    private String getFooter(double totalPrice){
         String footer = "";
-        footer = "Amount owed is " + totalAmount + "\n" +
+        footer = "Amount owed is " + totalPrice + "\n" +
                 "You earned " + frequentRentalPoints + " frequent rental points";
         return footer;
     }
@@ -61,8 +62,8 @@ public class Customer {
                     rental.computeRentalPrice()));
         }
 
-        double totalAmount = calculateTotalAmount();
-        result.append(getFooter(totalAmount));
+        double totalPrice = calculateTotalPrice();
+        result.append(getFooter(totalPrice));
         return result.toString();
     }
 
@@ -81,7 +82,7 @@ public class Customer {
             result.append("</rental>\n");
         }
 
-        result.append("\t<total>").append(calculateTotalAmount()).append("</total>\n");
+        result.append("\t<total>").append(calculateTotalPrice()).append("</total>\n");
         result.append("\t<frequentPoints>").append(frequentRentalPoints).append("</frequentPoints>\n");
         result.append("</customer>");
 
